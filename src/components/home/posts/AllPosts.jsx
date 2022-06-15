@@ -1,47 +1,23 @@
 import style from './AllPosts.module.css';
-import { useEffect, useState } from 'react';
 import Post from './post/Post';
 
-const AllPosts = ({ searchValue }) => {
-  const onLikePost = async (id) => {
-    const result = await fetch(`http://localhost:3100/images/${id}/likes`, {
-      method: 'POST',
-      headers: {
-        'Content-type': 'text/plain',
-      },
-      body: null,
-    });
-    return result;
-  };
-
-  const fetchImages = async () => {
-    const result = await fetch('http://localhost:3100/images');
-    const data = await result.json();
-    setImages(data);
-  };
-
-  const [images, setImages] = useState(null);
-
-  useEffect(() => {
-    fetchImages();
-  }, []);
-
+const AllPosts = ({ searchValue, people }) => {
   return (
     <main className={style.posts}>
-      {images &&
-        images
-          .filter((post) => {
-            if (searchValue === '') {
-              return post;
-            } else if (
-              post.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-              post.author.toLowerCase().includes(searchValue.toLowerCase()) ||
-              post.price.toString().includes(searchValue.toLowerCase())
-            ) {
-              return post;
-            }
-          })
-          .map((img) => <Post key={img.id} img={img} onLikePost={onLikePost} />)}
+      {people &&
+        people
+          // .filter((person) => {
+          //   if (searchValue === '') {
+          //     return person;
+          //   } else if (
+          //     person.title.toLowerCase().includes(searchValue.toLowerCase()) ||
+          //     person.author.toLowerCase().includes(searchValue.toLowerCase()) ||
+          //     person.price.toString().includes(searchValue.toLowerCase())
+          //   ) {
+          //     return post;
+          //   }
+          // })
+          .map((person) => <Post key={person.id} person={person} />)}
     </main>
   );
 };

@@ -1,4 +1,4 @@
-# Photo collection
+# Oompa Loompas
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -12,9 +12,9 @@ to install the dependencies in the local "node_modules" folder.
 
 Then run:
 
-### `npm start` and `npm run mocks`
+### `npm start`
 
-to start the mock API and run the app in the development mode.\
+to run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\

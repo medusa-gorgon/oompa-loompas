@@ -1,15 +1,7 @@
-/* MOBILE */
-@media screen and (max-width: 767px) {
-  .header {
-    padding: 10px 20px;
-  }
+.header {
+  padding: 10px var(--horizontalPadding);
 }
-/* DESKTOP */
-@media screen and (min-width: 768px) {
-  .header {
-    padding: 10px 100px;
-  }
-}
+
 .header {
   height: 50px;
   width: 100%;

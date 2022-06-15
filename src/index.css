@@ -1,22 +1,6 @@
 @import url(./normalize.css);
 @import url(./adjustment.css);
 
-@font-face {
-  font-family: 'Brandon Grotesque';
-  src: url('./fonts/Brandon-Grotesque/Brandon_med.otf');
-  font-weight: 500;
-}
-@font-face {
-  font-family: 'Droid Serif';
-  src: url('./fonts/Droid-Serif/DroidSerif.ttf');
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Neutra2Text';
-  src: url('./fonts/Neutra2Text/Neutra2Text-Demi.otf');
-  font-weight: 400;
-}
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -24,20 +8,26 @@ body {
   --white: #ffffff;
   --black: #000000;
   --primary: #d8d8d8;
-  --secondery: #5c5c5c;
+  --secondary: #5f5f5f;
   --hover: #33b7d3;
 }
 
 @media screen and (max-width: 767px) {
+  :root {
+    --horizontalPadding: 20px;
+  }
   .container {
     width: 100%;
-    max-width: 500px;
+    max-width: 700px;
     margin: 20px auto;
   }
 }
 @media screen and (min-width: 768px) {
+  :root {
+    --horizontalPadding: 100px;
+  }
   .container {
-    max-width: 1820px;
+    /* max-width: 1820px; */
     margin: 20px auto;
   }
 }
