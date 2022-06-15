@@ -9,7 +9,7 @@ const Post = ({ person }) => {
           <img className={style.img} src={person.image} alt={`${person.first_name} ${person.last_name}'s profile`} />
         </div>
         <div className={style.description}>
-          <PersonDesc person={person} />
+          <PersonDesc person={person} hover={true} />
         </div>
       </a>
     </div>

@@ -12,7 +12,7 @@ const Hero = ({ setSearchValue }) => {
           className={style.input}
           id='input'
           type='text'
-          placeholder={`Search`}
+          placeholder='Search'
         />
         <label htmlFor='input'>
           <div className={style.searchIcon}>

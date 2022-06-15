@@ -6,6 +6,8 @@ import Profile from './components/profile/Profile';
 
 function App() {
   const [searchValue, setSearchValue] = useState('');
+  const [people, setPeople] = useState(null);
+
   const fetchImages = async () => {
     const result = await fetch('https://2q2woep105.execute-api.eu-west-1.amazonaws.com/napptilus/oompa-loompas?page=1');
     const data = await result.json();
@@ -13,11 +15,10 @@ function App() {
     setPeople(data.results);
   };
 
-  const [people, setPeople] = useState(null);
-
   useEffect(() => {
     fetchImages();
   }, []);
+
   return (
     <div className='App'>
       <div className='container'>

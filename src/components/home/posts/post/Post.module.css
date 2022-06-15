@@ -12,7 +12,8 @@
   border: var(--border) solid 1px;
   width: 100%;
 }
-.post:hover .name {
+
+.post:hover :global(.descHover) {
   color: var(--hover);
 }
 
