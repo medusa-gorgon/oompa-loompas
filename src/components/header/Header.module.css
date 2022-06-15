@@ -1,0 +1,42 @@
+/* MOBILE */
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 10px 20px;
+  }
+}
+/* DESKTOP */
+@media screen and (min-width: 768px) {
+  .header {
+    padding: 10px 100px;
+  }
+}
+.header {
+  height: 50px;
+  width: 100%;
+  background-color: var(--primary);
+  transition: all 0.3s;
+}
+
+.header:hover {
+  background-color: var(--hover);
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  height: 100%;
+}
+.logo {
+  height: 100%;
+}
+.logo img {
+  height: 100%;
+}
+.title {
+  color: var(--black);
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-left: 30px;
+}
