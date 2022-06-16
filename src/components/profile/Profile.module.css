@@ -52,3 +52,7 @@
 .textBlock {
   font-size: 18px;
 }
+
+.textpost {
+  color: var(--black);
+}

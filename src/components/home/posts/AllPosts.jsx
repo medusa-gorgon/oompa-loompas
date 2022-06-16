@@ -1,7 +1,7 @@
 import style from './AllPosts.module.css';
 import Post from './post/Post';
 
-const AllPosts = ({ searchValue, people }) => {
+const AllPosts = ({ searchValue, people, fetchProfile }) => {
   return (
     <main className={style.posts}>
       {people &&
@@ -19,7 +19,7 @@ const AllPosts = ({ searchValue, people }) => {
               return '';
             }
           })
-          .map((person) => <Post key={person.id} person={person} />)}
+          .map((person) => <Post fetchProfile={fetchProfile} key={person.id} person={person} />)}
     </main>
   );
 };

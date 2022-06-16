@@ -1,18 +1,24 @@
 import logo from '../../assets/logo.png';
 import style from './Header.module.css';
+import { NavLink } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({ setProfile }) => {
   return (
-    <header className={style.header}>
-      <a href=''>
+    <NavLink
+      to='/'
+      onClick={() => {
+        setProfile(null);
+      }}
+    >
+      <header className={style.header}>
         <div className={style.block}>
           <div className={style.logo}>
-            <img src={logo} alt='' />
+            <img src={logo} alt='logo' />
           </div>
           <div className={style.title}>Oompa Loompa's crew</div>
         </div>
-      </a>
-    </header>
+      </header>
+    </NavLink>
   );
 };
 
