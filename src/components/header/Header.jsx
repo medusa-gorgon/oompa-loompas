@@ -1,14 +1,10 @@
 import logo from '../../assets/logo.png';
 import style from './Header.module.css';
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { resetProfile } from '../../redux/profileSlice';
 
 const Header = () => {
-  const dispatch = useDispatch();
-
   return (
-    <NavLink to='/' onClick={() => dispatch(resetProfile())}>
+    <NavLink to='/'>
       <header className={style.header}>
         <div className={style.block}>
           <div className={style.logo}>

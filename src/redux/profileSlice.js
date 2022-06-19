@@ -3,20 +3,22 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 export const getUserProfile = createAsyncThunk('profile/getUserProfile', async (id) => {
   const response = await fetch(`https://2q2woep105.execute-api.eu-west-1.amazonaws.com/napptilus/oompa-loompas/${id}`);
   const data = await response.json();
-  return data;
+  return { id, fetchedDate: Date.now(), data };
 });
 
 export const profileSlice = createSlice({
   name: 'profile',
   initialState: {
-    profile: null,
-    fetchedDate: 90000000,
+    currentProfile: null,
+    profiles: [],
     status: 'idle',
     error: null,
   },
   reducers: {
-    resetProfile: (state) => {
-      state.profile = null;
+    setCurrentProfile: (state, action) => {
+      state.currentProfile = state.profiles.find((profile) => {
+        return Number(profile.id) === Number(action.payload);
+      });
     },
   },
   extraReducers(builder) {
@@ -27,9 +29,8 @@ export const profileSlice = createSlice({
       .addCase(getUserProfile.fulfilled, (state, action) => {
         state.status = 'succeeded';
         // Add any fetched posts to the array
-        state.profile = action.payload;
-        state.fetchedDate = Date.now();
-        console.log('Profile:', state.profile);
+        state.currentProfile = action.payload;
+        state.profiles = state.profiles.concat(action.payload);
       })
       .addCase(getUserProfile.rejected, (state, action) => {
         state.status = 'failed';
@@ -38,6 +39,6 @@ export const profileSlice = createSlice({
   },
 });
 
-export const { resetProfile, setProfileId } = profileSlice.actions;
+export const { setCurrentProfile } = profileSlice.actions;
 
 export default profileSlice.reducer;

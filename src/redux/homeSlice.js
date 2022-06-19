@@ -25,14 +25,14 @@ export const homeSlice = createSlice({
     builder
       .addCase(fetchPosts.pending, (state) => {
         state.status = 'loading';
-        console.log('Posts load:', state.posts);
+        // console.log('Posts load:', state.posts);
       })
       .addCase(fetchPosts.fulfilled, (state, action) => {
         state.status = 'succeeded';
         // state.posts = state.posts.concat(action.payload);
         state.posts = action.payload;
         state.fetchedDate = Date.now();
-        console.log('Posts:', state.posts);
+        // console.log('Posts:', state.posts);
       })
       .addCase(fetchPosts.rejected, (state, action) => {
         state.status = 'failed';

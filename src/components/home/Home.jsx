@@ -13,7 +13,7 @@ const Home = ({ setSearchValue, searchValue }) => {
   useEffect(() => {
     const oneday = 60 * 60 * 24 * 1000;
     const today = Date.now();
-    if (status === 'idle' && today - fetchedDate > oneday) {
+    if (status === 'idle' && today - oneday > fetchedDate) {
       dispatch(fetchPosts());
     }
   }, [status, dispatch, posts, fetchedDate]);
