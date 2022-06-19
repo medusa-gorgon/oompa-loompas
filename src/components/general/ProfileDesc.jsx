@@ -1,6 +1,6 @@
-import style from './PersonDesc.module.css';
+import style from './ProfileDesc.module.css';
 
-const PersonDesc = ({ person }) => {
+const ProfileDesc = ({ person }) => {
   return (
     <div className={style.description}>
       <span className={`${style.name}  descHover`}>{`${person.first_name} ${person.last_name}`}</span>
@@ -10,4 +10,4 @@ const PersonDesc = ({ person }) => {
   );
 };
 
-export default PersonDesc;
+export default ProfileDesc;

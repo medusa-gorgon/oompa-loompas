@@ -22,7 +22,7 @@
 @media screen and (min-width: 768px) {
   .profile {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     width: 100%;
     padding: 60px var(--horizontalPadding);
   }

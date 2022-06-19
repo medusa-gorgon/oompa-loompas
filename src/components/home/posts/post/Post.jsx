@@ -1,14 +1,18 @@
-import PersonDesc from '../../../general/PersonDesc';
+import ProfileDesc from '../../../general/ProfileDesc';
 import style from './Post.module.css';
 import { NavLink } from 'react-router-dom';
+import { getUserProfile } from '../../../../redux/profileSlice';
+import { useDispatch } from 'react-redux';
 
-const Post = ({ person, fetchProfile }) => {
+const Post = ({ person }) => {
+  const dispatch = useDispatch();
   return (
     <div className={style.post}>
       <NavLink
         to={`/profile/${person.id}`}
         onClick={() => {
-          fetchProfile(person.id);
+          // dispatch(setProfileId(person.id));
+          dispatch(getUserProfile(person.id));
         }}
         className={style.postLink}
       >
@@ -16,7 +20,7 @@ const Post = ({ person, fetchProfile }) => {
           <img className={style.img} src={person.image} alt={`${person.first_name} ${person.last_name}'s profile`} />
         </div>
         <div className={style.description}>
-          <PersonDesc person={person} hover={true} />
+          <ProfileDesc person={person} hover={true} />
         </div>
       </NavLink>
     </div>

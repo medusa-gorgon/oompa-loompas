@@ -1,7 +1,27 @@
 import style from './AllPosts.module.css';
 import Post from './post/Post';
+// import { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { fetchPosts } from '../../../redux/homeSlice';
 
-const AllPosts = ({ searchValue, people, fetchProfile }) => {
+const AllPosts = ({ searchValue, people }) => {
+  // const dispatch = useDispatch();
+  // const people = useSelector((state) => state.homePage.posts);
+  // const postStatus = useSelector((state) => state.homePage.status);
+  // useEffect(() => {
+  //   console.log(postStatus);
+  //   if (postStatus === 'idle') {
+  //     dispatch(fetchPosts());
+  //   }
+  // }, [postStatus, dispatch]);
+
+  // let content;
+
+  // if (postStatus === 'loading') {
+  //   <div>Loading...</div>;
+  // } else if (postStatus === 'succeeded') {
+  // content = people
+
   return (
     <main className={style.posts}>
       {people &&
@@ -19,7 +39,7 @@ const AllPosts = ({ searchValue, people, fetchProfile }) => {
               return '';
             }
           })
-          .map((person) => <Post fetchProfile={fetchProfile} key={person.id} person={person} />)}
+          .map((person) => <Post key={person.id} person={person} />)}
     </main>
   );
 };
