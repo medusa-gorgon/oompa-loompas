@@ -2,6 +2,7 @@
   "name": "oompa-loompas",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mg-bizarre.github.io/oompa-loompas",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
     "@testing-library/jest-dom": "^5.16.4",
@@ -19,6 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build",
     "sprite": "svgstore -o src/assets/sprite.svg src/assets/icons/*.svg"
   },
   "eslintConfig": {
@@ -40,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^4.0.0",
     "svgstore-cli": "^2.0.1"
   }
 }
