@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/oompa-loompas/static/css/main.732e84a2.css",
+    "main.js": "/oompa-loompas/static/js/main.5ec1ff1e.js",
+    "static/js/787.ab55315f.chunk.js": "/oompa-loompas/static/js/787.ab55315f.chunk.js",
+    "index.html": "/oompa-loompas/index.html",
+    "main.732e84a2.css.map": "/oompa-loompas/static/css/main.732e84a2.css.map",
+    "main.5ec1ff1e.js.map": "/oompa-loompas/static/js/main.5ec1ff1e.js.map",
+    "787.ab55315f.chunk.js.map": "/oompa-loompas/static/js/787.ab55315f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.732e84a2.css",
+    "static/js/main.5ec1ff1e.js"
+  ]
+}
