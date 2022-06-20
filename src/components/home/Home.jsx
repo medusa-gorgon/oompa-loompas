@@ -32,6 +32,7 @@ const Home = ({ setSearchValue, searchValue }) => {
       <Hero setSearchValue={setSearchValue} />
       {status === 'loading' ? (
         <div>
+          <AllPosts searchValue={searchValue} people={posts} />
           <Preloader />
         </div>
       ) : status === 'succeeded' ? (
@@ -39,7 +40,6 @@ const Home = ({ setSearchValue, searchValue }) => {
       ) : (
         ''
       )}
-      {isFetching && <Preloader />}
     </div>
   );
 };
