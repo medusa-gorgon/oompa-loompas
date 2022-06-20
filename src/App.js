@@ -18,7 +18,6 @@ function App() {
             <Header />
             <Routes>
               <Route path='/' element={<Home setSearchValue={setSearchValue} searchValue={searchValue} />} />
-
               <Route path='/profile/:id' element={<ProfileContainer />} />
             </Routes>
           </div>

@@ -1,25 +1,25 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const url = 'https://2q2woep105.execute-api.eu-west-1.amazonaws.com/napptilus/oompa-loompas?page=1';
+const url = 'https://2q2woep105.execute-api.eu-west-1.amazonaws.com/napptilus/oompa-loompas?page=';
 
-export const fetchPosts = createAsyncThunk('home/fetchPosts', async () => {
-  const response = await fetch(url);
+export const fetchPosts = createAsyncThunk('home/fetchPosts', async (page) => {
+  const response = await fetch(url + page);
   const data = await response.json();
-  return data.results;
+  return data;
 });
 
 export const homeSlice = createSlice({
   name: 'posts',
   initialState: {
     posts: [],
+    nextPage: 1,
+    totalPages: 2,
     fetchedDate: 0,
     status: 'idle',
     error: null,
   },
   reducers: {
-    // incrementByAmount: (state, action) => {
-    //   state.value += action.payload;
-    // },
+    //
   },
   extraReducers(builder) {
     builder
@@ -28,8 +28,11 @@ export const homeSlice = createSlice({
       })
       .addCase(fetchPosts.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        // state.posts = state.posts.concat(action.payload);
-        state.posts = action.payload;
+        if (state.totalPages === 2) {
+          state.totalPages = action.payload.total;
+        }
+        state.posts = state.posts.concat(action.payload.results);
+        state.nextPage += 1;
         state.fetchedDate = Date.now();
       })
       .addCase(fetchPosts.rejected, (state, action) => {

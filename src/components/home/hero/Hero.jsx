@@ -4,7 +4,13 @@ import style from './Hero.module.css';
 const Hero = ({ setSearchValue }) => {
   return (
     <section className={style.hero}>
-      <form action='' className={style.form}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        action=''
+        className={style.form}
+      >
         <input
           onChange={(e) => {
             setSearchValue(e.target.value);

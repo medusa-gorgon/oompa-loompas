@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-// import style from './Profile.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserProfile, setCurrentProfile } from '../../redux/profileSlice';
 import { useLocation } from 'react-router-dom';
