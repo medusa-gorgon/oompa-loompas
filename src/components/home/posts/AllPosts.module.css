@@ -5,20 +5,20 @@
   row-gap: 20px;
 }
 
-/* DESKTOP */
-@media screen and (min-width: 1025px) {
+/* DESKTOP 1025px*/
+@media screen and (min-width: 64.063rem) {
   .posts {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-/* TABLET */
-@media screen and (max-width: 1024px) {
+/* TABLET 1024px*/
+@media screen and (max-width: 64rem) {
   .posts {
     grid-template-columns: 1fr 1fr;
   }
 }
-/* MOBILE */
-@media screen and (max-width: 767px) {
+/* MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
   .posts {
     grid-template-columns: 1fr;
     padding: 40px 0;

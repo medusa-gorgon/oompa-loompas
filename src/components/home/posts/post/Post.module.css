@@ -1,15 +1,4 @@
-/* MOBILE */
-@media screen and (max-width: 767px) {
-  /*  */
-}
-
-/* DESKTOP */
-@media screen and (min-width: 768px) {
-  /*  */
-}
-
 .post {
-  border: var(--border) solid 1px;
   width: 100%;
 }
 
@@ -34,5 +23,5 @@
 }
 
 .description {
-  padding: 25px 0;
+  padding: 1.563rem 0;
 }

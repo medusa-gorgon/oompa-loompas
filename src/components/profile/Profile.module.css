@@ -1,5 +1,5 @@
-/* MOBILE */
-@media screen and (max-width: 767px) {
+/* MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
   .profile {
     width: 100%;
     padding: 30px var(--horizontalPadding);
@@ -11,15 +11,15 @@
   }
 
   .description {
-    padding: 25px 0;
+    padding: 1.563rem 0;
   }
 
   .textBlock {
     width: 100%;
   }
 }
-/* DESKTOP */
-@media screen and (min-width: 768px) {
+/* DESKTOP 768px*/
+@media screen and (min-width: 48rem) {
   .profile {
     display: flex;
     justify-content: flex-start;
@@ -33,7 +33,7 @@
   }
 
   .description {
-    padding-bottom: 25px;
+    padding-bottom: 1.563rem;
   }
 
   .textBlock {
@@ -50,7 +50,7 @@
 }
 
 .textBlock {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .textpost {

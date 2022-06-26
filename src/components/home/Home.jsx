@@ -10,7 +10,7 @@ import useInfiniteScroll from '../general/useInfiniteScroll';
 const Home = ({ setSearchValue, searchValue }) => {
   const dispatch = useDispatch();
   const { posts, nextPage, totalPages, status, fetchedDate } = useSelector((state) => state.homePage);
-
+  // eslint-disable-next-line
   const [isFetching, setIsFetching] = useInfiniteScroll(() => {
     if (nextPage <= totalPages) {
       dispatch(fetchPosts(nextPage));
@@ -25,7 +25,7 @@ const Home = ({ setSearchValue, searchValue }) => {
     if (status === 'idle' && today - oneday > fetchedDate && nextPage <= totalPages) {
       dispatch(fetchPosts(nextPage));
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className={style.home}>

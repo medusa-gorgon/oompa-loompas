@@ -1,26 +1,26 @@
-/* MOBILE */
-@media screen and (max-width: 767px) {
+/* MOBILE 767px*/
+@media screen and (max-width: 47.938rem) {
   .title {
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 2.25rem;
+    line-height: 2.4rem;
     color: var(--black);
   }
   .subtitle {
-    font-size: 25px;
-    line-height: 30px;
+    font-size: 1.9rem;
+    line-height: 2rem;
     color: var(--secondary);
   }
 }
-/* DESKTOP */
-@media screen and (min-width: 768px) {
+/* DESKTOP 768px*/
+@media screen and (min-width: 48rem) {
   .title {
-    font-size: 50px;
-    line-height: 55px;
+    font-size: 3.125rem;
+    line-height: 3.438rem;
     color: var(--black);
   }
   .subtitle {
-    font-size: 35px;
-    line-height: 40px;
+    font-size: 2.188rem;
+    line-height: 2.5rem;
     color: var(--secondary);
   }
 }
@@ -37,7 +37,7 @@
 }
 
 .form {
-  width: 270px;
+  width: 16.875rem;
   border-radius: 10px;
   background-color: var(--white);
   padding: 10px;
@@ -51,7 +51,7 @@
 }
 .input {
   width: 100%;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 20px;
   color: var(--black);
   font-family: 'Arial';

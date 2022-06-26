@@ -12,16 +12,16 @@
 
 .name {
   color: var(--black);
-  font-size: 20px;
-  line-height: 25px;
+  font-size: 1.25rem;
+  line-height: 1.563rem;
   font-weight: bold;
   transition: all 0.3s;
 }
 
 .gender,
 .profession {
-  font-size: 16px;
-  line-height: 25px;
+  font-size: 1rem;
+  line-height: 1.563rem;
   font-weight: bold;
   color: var(--secondary);
 }

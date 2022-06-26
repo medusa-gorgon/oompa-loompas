@@ -4,16 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <NavLink to='/'>
-      <header className={style.header}>
+    <header className={style.header}>
+      <NavLink to='/' className={style.link}>
         <div className={style.block}>
           <div className={style.logo}>
             <img src={logo} alt='logo' />
           </div>
           <div className={style.title}>Oompa Loompa's crew</div>
         </div>
-      </header>
-    </NavLink>
+      </NavLink>
+    </header>
   );
 };
 
