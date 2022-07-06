@@ -1,6 +1,6 @@
 # Oompa Loompas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Scroll through, filter and read about the Oomppa Loompa you need.
 
 ## Getting started
 
