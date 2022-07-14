@@ -11,7 +11,7 @@ export const fetchPosts = createAsyncThunk('home/fetchPosts', async (page) => {
 export const homeSlice = createSlice({
   name: 'posts',
   initialState: {
-    posts: [],
+    posts: null,
     nextPage: 1,
     totalPages: 2,
     fetchedDate: 0,
@@ -31,7 +31,12 @@ export const homeSlice = createSlice({
         if (state.totalPages === 2) {
           state.totalPages = action.payload.total;
         }
-        state.posts = state.posts.concat(action.payload.results);
+        if (state.posts === null) {
+          state.posts = action.payload.results;
+        } else {
+          state.posts = state.posts.concat(action.payload.results);
+        }
+
         state.nextPage += 1;
         state.fetchedDate = Date.now();
       })

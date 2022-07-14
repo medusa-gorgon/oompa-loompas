@@ -1,6 +1,6 @@
 # Oompa Loompas
 
-Scroll through, filter and read about the Oomppa Loompa you need.
+Scroll through, filter and read about the Oompa Loompa you need.
 
 ## Getting started
 

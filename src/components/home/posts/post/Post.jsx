@@ -1,4 +1,4 @@
-import ProfileDesc from '../../../general/ProfileDesc';
+import ProfileDesc from '../../../general/profileDesc/ProfileDesc';
 import style from './Post.module.css';
 import { NavLink } from 'react-router-dom';
 

@@ -1,11 +1,10 @@
 import AllPosts from './posts/AllPosts';
 import Hero from './hero/Hero';
-import Preloader from '../general/Preloader';
 import style from './Home.module.css';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchPosts } from '../../redux/homeSlice';
-import useInfiniteScroll from '../general/useInfiniteScroll';
+import useInfiniteScroll from '../hooks/useInfiniteScroll';
 
 const Home = ({ setSearchValue, searchValue }) => {
   const dispatch = useDispatch();
@@ -30,16 +29,7 @@ const Home = ({ setSearchValue, searchValue }) => {
   return (
     <div className={style.home}>
       <Hero setSearchValue={setSearchValue} />
-      {status === 'loading' ? (
-        <div>
-          <AllPosts searchValue={searchValue} people={posts} />
-          <Preloader />
-        </div>
-      ) : status === 'succeeded' ? (
-        <AllPosts searchValue={searchValue} people={posts} />
-      ) : (
-        ''
-      )}
+      <AllPosts searchValue={searchValue} people={posts} />
     </div>
   );
 };

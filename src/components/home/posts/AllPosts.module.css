@@ -24,3 +24,8 @@
     padding: 40px 0;
   }
 }
+
+.notFound {
+  font-size: 1.25rem;
+  color: var(--black);
+}

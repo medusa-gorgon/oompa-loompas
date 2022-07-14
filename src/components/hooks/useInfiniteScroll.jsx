@@ -5,7 +5,7 @@ const useInfiniteScroll = (callback) => {
 
   useEffect(() => {
     window.addEventListener('scroll', debounce(handleScroll, 300));
-    return () => window.removeEventListener('scroll', debounce(handleScroll, 300));
+    return () => window.removeEventListener('scroll', debounce(handleScroll, 300)); // eslint-disable-next-line
   }, []);
 
   function handleScroll() {
@@ -28,7 +28,7 @@ const useInfiniteScroll = (callback) => {
 
   useEffect(() => {
     if (!isFetching) return;
-    callback();
+    callback(); // eslint-disable-next-line
   }, [isFetching]);
 
   return [isFetching, setIsFetching];

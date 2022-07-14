@@ -1,4 +1,4 @@
-import ProfileDesc from '../general/ProfileDesc';
+import ProfileDesc from '../general/profileDesc/ProfileDesc';
 import style from './Profile.module.css';
 
 const Profile = ({ profile }) => {
@@ -7,7 +7,7 @@ const Profile = ({ profile }) => {
   };
 
   return (
-    <div className={style.profile}>
+    <main className={style.profile}>
       <div className={style.imgBlock}>
         <img className={style.img} src={profile.image} alt={`${profile.first_name} ${profile.last_name}'s profile`} />
       </div>
@@ -17,7 +17,7 @@ const Profile = ({ profile }) => {
         </div>
         <div className={style.textpost} dangerouslySetInnerHTML={createMarkup()}></div>
       </div>
-    </div>
+    </main>
   );
 };
 

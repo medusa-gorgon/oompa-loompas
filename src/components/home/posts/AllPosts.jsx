@@ -11,19 +11,25 @@ const AllPosts = ({ searchValue, people }) => {
       return find;
     }
   };
+
+  const filtered =
+    people &&
+    people.filter((person) => {
+      if (!searchValue) {
+        return person;
+      } else {
+        return filterFunc(person, person.first_name, person.last_name, person.profession);
+      }
+    });
+
   return (
     <main className={style.posts}>
       {people &&
-        people
-          .filter((person) => {
-            if (!searchValue) {
-              return person;
-            } else if (filterFunc(person, person.first_name, person.last_name, person.profession)) {
-              return person;
-            }
-            return '';
-          })
-          .map((person) => <Post key={person.id} person={person} />)}
+        (filtered.length > 0 ? (
+          filtered.map((person) => <Post key={person.id} person={person} />)
+        ) : (
+          <div className={style.notFound}>No results found.</div>
+        ))}
     </main>
   );
 };

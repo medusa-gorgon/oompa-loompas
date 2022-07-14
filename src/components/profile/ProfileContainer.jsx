@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserProfile, setCurrentProfile } from '../../redux/profileSlice';
 import { useLocation } from 'react-router-dom';
-import Preloader from '../general/Preloader';
 import Profile from './Profile';
 
 const ProfileContainer = () => {
@@ -23,9 +22,7 @@ const ProfileContainer = () => {
     }
   }, [currentProfile]);
 
-  if (status === 'loading') {
-    return <Preloader />;
-  } else if (status === 'succeeded' && currentProfile) {
+  if (currentProfile) {
     return <Profile profile={currentProfile.data} />;
   } else if (status === 'failed') {
     return <div>error</div>;
