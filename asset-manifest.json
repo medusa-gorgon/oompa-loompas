@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/oompa-loompas/static/css/main.89a40854.css",
-    "main.js": "/oompa-loompas/static/js/main.45254526.js",
-    "static/js/787.ab55315f.chunk.js": "/oompa-loompas/static/js/787.ab55315f.chunk.js",
+    "main.css": "/oompa-loompas/static/css/main.69386236.css",
+    "main.js": "/oompa-loompas/static/js/main.0de8c14c.js",
     "index.html": "/oompa-loompas/index.html",
-    "main.89a40854.css.map": "/oompa-loompas/static/css/main.89a40854.css.map",
-    "main.45254526.js.map": "/oompa-loompas/static/js/main.45254526.js.map",
-    "787.ab55315f.chunk.js.map": "/oompa-loompas/static/js/787.ab55315f.chunk.js.map"
+    "main.69386236.css.map": "/oompa-loompas/static/css/main.69386236.css.map",
+    "main.0de8c14c.js.map": "/oompa-loompas/static/js/main.0de8c14c.js.map"
   },
   "entrypoints": [
-    "static/css/main.89a40854.css",
-    "static/js/main.45254526.js"
+    "static/css/main.69386236.css",
+    "static/js/main.0de8c14c.js"
   ]
 }
